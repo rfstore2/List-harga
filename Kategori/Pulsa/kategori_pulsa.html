@@ -7,14 +7,16 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f0f7f9;
-      margin: 40px;
+      margin: 0;
       display: flex;
-      justify-content: center;
       flex-direction: column;
       align-items: center;
+      padding: 40px 0 20px;
+      box-sizing: border-box;
+      min-height: 100vh;
     }
     .header-kategori-container {
-      width: 500px; /* Lebar penuh layar */
+      width: 100vw; /* Lebar penuh layar */
       position: fixed; /* Tetap di atas saat scroll */
       top: 0;
       left: 0;
@@ -29,21 +31,24 @@
     }
     .header-kategori {
       max-width: 420px;
-      width: 100%;
+      width: 90%;
       color: white;
-      font-size: 30px;
+      font-size: 2rem;
       font-weight: 700;
       padding: 0 24px;
       text-align: center;
+      box-sizing: border-box;
     }
     .menu-kategori {
-      width: 420px;
+      width: 90%;
+      max-width: 420px;
       background: #ffffff;
-      border-radius: 16px 16px 16px 16px;
+      border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 82, 135, 0.15);
       overflow: hidden;
       padding: 0;
-      margin-top: 70px; /* Beri jarak agar tidak tertutup header fixed */
+      margin-top: 90px; /* Jarak agar tidak tertutup header tetap */
+      box-sizing: border-box;
     }
     .menu-item {
       display: flex;
@@ -83,6 +88,27 @@
       flex: 1;
       margin-left: 0;
       letter-spacing: 0.02em;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header-kategori {
+        font-size: 1.5rem;
+        padding: 0 12px;
+      }
+      .menu-kategori {
+        width: 95%;
+        margin-top: 80px;
+      }
+      .menu-item {
+        font-size: 16px;
+        padding: 12px 16px;
+      }
+      .menu-logo {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+      }
     }
   </style>
 </head>
