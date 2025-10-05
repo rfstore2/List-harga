@@ -97,7 +97,7 @@
         try {
           const [s, p] = await Promise.all([
             fetch('../../../settings.json').then(r => r.json()),
-            fetch('tri.json').then(r => r.json())
+            fetch('https://www.okeconnect.com/harga/json?id=905ccd028329b0a&produk=kuota_nasional,kuota_tri').then(r => r.json())
           ]);
   
           allProducts = Array.isArray(p) ?
